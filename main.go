@@ -3,5 +3,6 @@ package main
 import "fmt"
 
 func main() {
-  fmt.Println("Hello, World!!")
+	scrape()
+	fmt.Println("Hello, World!!")
 }
