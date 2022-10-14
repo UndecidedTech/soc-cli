@@ -9,7 +9,7 @@ import (
 
 func Scrape() {
 	c := colly.NewCollector(
-		colly.AllowedDomains("https://reditt1.soccerstreams.net/"),
+		colly.AllowedDomains("reditt1.soccerstreams.net"),
 	)
 	c.OnError(func(_ *colly.Response, err error) {
 		log.Println("Something went wrong:", err)
