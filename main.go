@@ -5,12 +5,11 @@ import (
 
 	"example.com/m/v2/cli"
 	"example.com/m/v2/fetch"
-	"example.com/m/v2/headless"
 )
 
 func main() {
-	fetch.Scrape()
-	headless.Example()
+	// headless.Example()
+	fetch.GetJson()
 	fmt.Println("ran")
 	cli.Run()
 }
