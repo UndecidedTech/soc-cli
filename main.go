@@ -11,5 +11,5 @@ func main() {
 	// headless.Example()
 	fetch.GetJson()
 	fmt.Println("ran")
-	cli.Run()
+	cli.Start()
 }

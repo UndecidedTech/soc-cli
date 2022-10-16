@@ -84,19 +84,20 @@ func GetGames(leagueId int, leagues []League) []Event {
 		_ = v
 		if leagues[i].Id == leagueId {
 			for o, p := range leagues[i].Events {
-				if leagues[i].Events[o].Status.Type == "inprogress" {
+				if leagues[i].Events[o].Status.Type == "" {
 					_ = p
 					var newEvent Event
 					newEvent.Id = leagues[i].Events[o].Id
 					newEvent.Slug = leagues[i].Events[o].Slug
 					newEvent.Status.Type = leagues[i].Events[o].Status.Type
 					games = append(games, newEvent)
+					fmt.Println(games, newEvent)
 				}
 
 			}
 		}
 	}
 
-	fmt.Println(games)
+	// fmt.Println(games)
 	return games
 }
